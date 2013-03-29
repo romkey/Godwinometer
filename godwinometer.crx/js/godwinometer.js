@@ -1,4 +1,5 @@
 var Godwinometer = {
+    keywords: [ "hitler", "nazi", "facist" ],
     init: function() {
     }
 };
