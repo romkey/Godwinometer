@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "Godwinometer",
+  "description": "Indicate compliance or non-compliance with Godwin's Law",
+  "version": "0.1",
+
+  "minimum_chrome_version" : "22.0.0.0",
+
+  "icons": { "16": "images/icon16.png",
+  	     "48": "images/icon48.png",
+	     "128": "images/icon128.png"
+	     },
+
+  "options_page" : "options.html",
+
+  "permissions": [
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "images/icon128.png",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "js/jquery-1.9.1.min.js",
+    "js/godwinometer.js",
+    "css/godwinometer.css",
+    "css/smoothness/jquery-ui-1.10.2.custom.min.js",
+  ],
+  "content_scripts" : [ {
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js" : [ "js/jquery-1.9.1.min.js", "js/jquery-ui-1.10.2.custom.min.js", "js/godwinometer.js" ],
+    "css" : [ "css/godwinometer.css", "css/smoothness/jquery-ui-1.10.2.custom.min.css" ]
+    } ]
+}
