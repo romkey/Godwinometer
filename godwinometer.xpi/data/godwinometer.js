@@ -1,0 +1,1 @@
+../../godwinometer.crx/js/godwinometer.js

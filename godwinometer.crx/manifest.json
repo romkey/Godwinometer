@@ -12,20 +12,11 @@
 	     "128": "images/icon128.png"
 	     },
 
-  "options_page" : "options.html",
-
-  "permissions": [
-    "storage"
-  ],
-  "browser_action": {
-    "default_icon": "images/icon128.png",
-    "default_popup": "popup.html"
-  },
   "web_accessible_resources": [
     "js/jquery-1.9.1.min.js",
     "js/godwinometer.js",
     "css/godwinometer.css",
-    "css/smoothness/jquery-ui-1.10.2.custom.min.js",
+    "css/smoothness/jquery-ui-1.10.2.custom.min.js"
   ],
   "content_scripts" : [ {
     "matches": [ "http://*/*", "https://*/*" ],
