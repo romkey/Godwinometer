@@ -14,13 +14,15 @@
 
   "web_accessible_resources": [
     "js/jquery-1.9.1.min.js",
+    "js/Browser.js",
     "js/godwinometer.js",
     "css/godwinometer.css",
-    "css/smoothness/jquery-ui-1.10.2.custom.min.js"
+    "css/smoothness/jquery-ui-1.10.2.custom.min.js",	
+    "images/icon128.png"
   ],
   "content_scripts" : [ {
     "matches": [ "http://*/*", "https://*/*" ],
-    "js" : [ "js/jquery-1.9.1.min.js", "js/jquery-ui-1.10.2.custom.min.js", "js/godwinometer.js" ],
+    "js" : [ "js/jquery-1.9.1.min.js", "js/jquery-ui-1.10.2.custom.min.js", "js/Browser.js", "js/godwinometer.js" ],
     "css" : [ "css/godwinometer.css", "css/smoothness/jquery-ui-1.10.2.custom.min.css" ]
     } ]
 }
