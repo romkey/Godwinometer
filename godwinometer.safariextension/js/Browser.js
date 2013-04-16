@@ -1,6 +1,6 @@
-// Browser.js for Chrome
+// Browser.js for Safari
 var OurBrowser = {
     url: function( name ) {
-	return chrome.extension.getURL( name );
+	return safari.extension.baseURI + name;
     }
 };

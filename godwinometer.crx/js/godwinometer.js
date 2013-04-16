@@ -27,7 +27,8 @@ var Godwinometer = {
 	var score = total / 687;
 
 	// build the div
-	var div = '<div id="godwinometer" style="-webkit-transform-origin: 0 0; -webkit-transform: scale(.5,.5);">';
+//	var div = '<div id="godwinometer" style="-webkit-transform-origin: 0 0;">';
+	var div = '<div id="godwinometer" style="">';
 	div += '<span style="font-family: helvetica; font-size: 4em; font-weight: 900;">' + total + '</span>';
 
 	div += '<div style="position: relative">';
@@ -42,8 +43,23 @@ var Godwinometer = {
 
 	$( 'body' ).append( div );
 
+
+	// calculate the scale for the div: take the height of the window, figure 
+	var win_height = $( window ).height();
+	var gm_height = $( '#godwinometer' ).height();
+	var ratio = win_height / gm_height;
+	ratio = Math.min( ratio, 1 );
+	ratio /= 2;
+
+//	var style =  '-webkit-transform: scale(.5,.5);';
+	var style =  'scale(' + ratio + ', ' + ratio + ');';
+	console.log( 'wh: ' + win_height + ', gh: ' + gm_height + ', ratio: ' + ratio + ', style: ' + style );
+
+
+	$( '#godwinometer' ).attr( 'style', '-webkit-transform-origin: 0 0; -webkit-transform: ' + style );
+
 	// if it gets clicked on, hide it
-	$( '#godwinonmeter' ).click( function() { $( '#godwinometer' ).hide(); } );
+	$( '#godwinometer' ).click( function() { $( '#godwinometer' ).hide(); } );
     }
 };
 
